@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoş Geldiniz | Modern Web Sayfası</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen selection:bg-slate-200">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                        M
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Memoski</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-slate-900 hover:text-slate-600 transition">Ana Sayfa</a>
+                    <a href="#about" class="text-slate-600 hover:text-slate-900 transition">Hakkında</a>
+                    <a href="#features" class="text-slate-600 hover:text-slate-900 transition">Özellikler</a>
+                    <a href="#contact" class="text-slate-600 hover:text-slate-900 transition">İletişim</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition shadow-sm">
+                        Başlayın
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-3">
+            <a href="#home" class="block text-slate-900 font-medium py-1">Ana Sayfa</a>
+            <a href="#about" class="block text-slate-600 font-medium py-1">Hakkında</a>
+            <a href="#features" class="block text-slate-600 font-medium py-1">Özellikler</a>
+            <a href="#contact" class="block text-slate-600 font-medium py-1">İletişim</a>
+            <a href="#contact" class="block w-full text-center bg-slate-900 text-white font-medium py-2 rounded-lg mt-2">
+                Başlayın
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section id="home" class="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50 border-b border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-wide text-slate-700 bg-slate-100 rounded-full border border-slate-200 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Yayında & Aktif
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                    Sade, Modern ve Minimalist Web Tasarımı
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                    İster kişisel portfolyonuz, ister projeleriniz için kullanabileceğiniz temiz ve hızlı bir başlangıç şablonu.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#features" class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-lg shadow-sm transition flex items-center justify-center gap-2">
+                        <span>Keşfetmeye Başla</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#about" class="bg-white hover:bg-slate-100 text-slate-700 font-medium px-6 py-3.5 rounded-lg border border-slate-200 shadow-sm transition flex items-center justify-center">
+                        Daha Fazla Bilgi
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 tracking-tight mb-4">Öne Çıkan Özellikler</h2>
+                    <p class="text-slate-600">İhtiyacınıza göre kolayca özelleştirebileceğiniz temel yapı taşları.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-slate-200 transition shadow-sm">
+                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-900 text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Yüksek Performans</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Gereksiz kodlardan arındırılmış, hafif ve mobil uyumlu altyapı sayesinde hızlı yükleme süreleri.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-slate-200 transition shadow-sm">
+                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-900 text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Tam Duyarlı (Responsive)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Masaüstü, tablet ve mobil cihazların tümünde kusursuz görünen esnek tasarım.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-slate-200 transition shadow-sm">
+                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-900 text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Kolay Özelleştirme</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Anlaşılır kod yapısı sayesinde içeriği ve renkleri kendi projenize göre saniyeler içinde değiştirin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-50 border-t border-b border-slate-200/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center gap-10">
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Hakkımızda</span>
+                        <h2 class="text-3xl font-bold text-slate-900">Sade ve Bütünsel Yaklaşım</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Göz yormayan beyaz tonları ve tipografi odaklı düzeni ile ziyaretçilerinize net bir deneyim sunar. Karmaşık detaylar yerine içeriğin kendisini ön plana çıkarır.
+                        </p>
+                        <div class="pt-2">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-slate-600 transition">
+                                Detayları Öğren <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-slate-100 rounded-xl p-6 border border-slate-200 flex items-center justify-center min-h-[220px]">
+                        <div class="text-center">
+                            <i class="fa-solid fa-layer-group text-4xl text-slate-400 mb-3"></i>
+                            <p class="text-xs font-medium text-slate-500">İçerik Görseli / Alanı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 tracking-tight mb-4">İletişime Geçin</h2>
+                    <p class="text-slate-600">Her türlü soru ve görüşleriniz için aşağıdaki formu kullanabilirsiniz.</p>
+                </div>
+
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mesajınız simüle edilerek gönderildi!');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Adınız</label>
+                            <input type="text" placeholder="Adınız" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">E-posta Adresiniz</label>
+                            <input type="email" placeholder="ornek@mail.com" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Mesajınız</label>
+                        <textarea rows="4" placeholder="Mesajınızı buraya yazın..." required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent text-sm resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 rounded-lg shadow-sm transition">
+                        Mesajı Gönder
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-slate-500">
+                &copy; <span id="year"></span> Memoski. Tüm hakları saklıdır.
+            </p>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-slate-600 transition"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-slate-600 transition"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-slate-600 transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Dynamic Year -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
